@@ -8,7 +8,7 @@ package com.nrkei.microservices.rapids_rivers;
 import java.util.ArrayList;
 import java.util.List;
 
-// Understands issue that arose when analyzing a JSON message
+// Understands issues that arose when analyzing a JSON message
 // Implements Collecting Parameter in Refactoring by Martin Fowler
 public class PacketProblems extends RuntimeException {
 
