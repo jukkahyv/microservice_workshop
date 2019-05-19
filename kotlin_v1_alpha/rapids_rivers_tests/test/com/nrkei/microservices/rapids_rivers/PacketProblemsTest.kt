@@ -52,13 +52,13 @@ internal class PacketProblemsTest {
 
     @Test fun `severe errors throw exception`() {
         try {
-            problems severeError "Severe error"
+            problems severeError "This severe error"
             fail<String>("Severe error did not automatically throw an exception")
         } catch (p: PacketProblems) {
             assertTrue(p.hasMessages())
             assertTrue(p.hasErrors())
             assertThat(p.toString(), containsString("Severe errors"))
-            assertThat(p.toString(), containsString("Severe error"))
+            assertThat(p.toString(), containsString("This severe error"))
         }
     }
 }
