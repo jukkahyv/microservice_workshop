@@ -20,7 +20,7 @@ class Monitor : River.PacketListener {
             val host = args[0]
             val port = args[1]
 
-            val rapidsConnection = RabbitMqRapids("monitor_in_java", host, port)
+            val rapidsConnection = RabbitMqRapids("monitor_in_kotlin", host, port)
             val river = River(rapidsConnection)
             // See RiverTest for various functions River supports to aid in filtering, like:
             //river.requireValue("key", "value");  // Reject packet unless it has key:value pair

@@ -20,12 +20,12 @@ class Need {
             val host = args[0]
             val port = args[1]
 
-            val rapidsConnection = RabbitMqRapids("car_rental_need_java", host, port)
+            val rapidsConnection = RabbitMqRapids("car_rental_need_kotlin", host, port)
             publish(rapidsConnection)
         }
 
 
-        fun publish(rapidsConnection: RapidsConnection) {
+        private fun publish(rapidsConnection: RapidsConnection) {
             try {
                 while (true) {
                     val jsonMessage = needPacket().toJson()
